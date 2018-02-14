@@ -1,0 +1,13 @@
+// Path to assets
+$assets: '../../src/assets';
+
+// Deps
+@import './variables/_variables.scss';
+@import './vendor/_normalize.scss';
+@import './mixins/_mixins.scss';
+
+// Theme
+@import './variables/_theme.scss';
+
+// Partials
+@import './partials/_landing.scss';
