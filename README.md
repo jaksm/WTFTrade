@@ -1,2 +1,2 @@
 # WTFTrade
-## Link: https://jaksm.github.io/WTFTrade/
+## Link: https://jaksm.github.io/WTFTrade/src/pages/landing
