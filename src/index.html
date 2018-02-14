@@ -32,25 +32,65 @@
 <body>
   <nav>
     <!-- Logo -->
-    <a href="#"><img src="assets/Logo.png" alt="">Best trading & gambling site!</a>
+    <a href="#">
+      <img src="assets/Logo.png" alt="">Best trading & gambling site!</a>
     <ul class="links">
-      <li><a href="#">Trade</a></li>
-      <li><a href="#">Support</a></li>
-      <li><a href="#">Settings</a></li>
+      <li>
+        <a href="#">Trade</a>
+      </li>
+      <li>
+        <a href="#">Support</a>
+      </li>
+      <li>
+        <a href="#">Settings</a>
+      </li>
     </ul>
-
+  
     <ul class="user">
       <!-- @if(Auth::check()) -->
-      <li><i class="icon-logout"></i>Quit</li>
-      <li><i class="icon-online"></i><span>Online: 341</span></li>
-      <li><i class="icon-balance"></i><span>Balance: $550.45</span></li>
-      <li><img src="assets/avatar.png" alt="USERNAME HERE" id="avatar"></li>
+      <li>
+        <i class="icon-logout"></i>Quit</li>
+      <li>
+        <i class="icon-online"></i>
+        <span>Online: 341</span>
+      </li>
+      <li>
+        <i class="icon-balance"></i>
+        <span>Balance: $550.45</span>
+      </li>
+      <li>
+        <img src="assets/avatar.png" alt="USERNAME HERE" id="avatar">
+      </li>
       <!-- @else -->
-       <!-- <li><i class="icon-logout"></i><span>Logout</span></li> -->
+      <!-- <li><i class="icon-logout"></i><span>Logout</span></li> -->
       <!-- @endif -->
     </ul>
     <i id="toggle" class="icon-hamburger"></i>
   </nav>
+  <main>
+    <section>
+      <div class="top">
+        <div class="controls"></div>
+      </div>
+      <div class="bottom">
+        <div class="controls"></div>
+      </div>
+    </section>
+    <section>
+      <div class="discount"></div>
+      <div class="info"></div>
+      <div class="bot-filters"></div>
+      <div class="commision"></div>
+    </section>
+    <section>
+      <div class="top">
+        <div class="controls"></div>
+      </div>
+      <div class="bottom">
+        <div class="controls"></div>
+      </div>
+    </section>
+  </main>
  <script>
    const toggle = document.querySelector('#toggle')
    toggle.onclick = () => {

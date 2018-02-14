@@ -1,0 +1,54 @@
+main {
+  background: url(#{$assets}/bg_main.png) no-repeat center;
+  background-size: cover;
+  height: calc(100vh - 4.35em);
+  display: flex;
+  section {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 4.35em);
+    background-color: rgba(221, 161, 221, .15);
+    .top, .bottom {
+      position: relative;
+      height: 50%;
+      .controls {
+        height: 10%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(204, 204, 204, .15);
+      }
+    }
+    .top {
+      background-color: rgba(94, 219, 188, .15);
+    }
+    .bottom {
+      background-color: rgba(154, 214, 41, .15);
+    }
+  }
+  section:nth-child(2) {
+    box-sizing: border-box;
+    flex: 1;
+    background-color: rgba(36, 75, 221, .15);
+    .discount {
+      flex: 1;
+      margin: 0 .5em;
+      margin-top: .5em;
+      padding: .5em;
+      background-color: rgba(221, 36, 107, .15);
+    }
+    .info, .bot-filters, .commision  {
+      box-sizing: border-box;
+      margin: 0 .5em;
+      margin-top: .5em;
+      padding: .5em; 
+      flex: 3;
+      background-color: rgba(42, 221, 36, .15);
+    }
+    div:last-child {
+      margin-bottom: .5em;
+    }
+  }
+}
