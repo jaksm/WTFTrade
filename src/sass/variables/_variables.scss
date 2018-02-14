@@ -5,12 +5,12 @@ $secondary: #1b0d19;
 $bg: #0c0a09;
 
 // Lightened
-$primary-light: lighten($primary, 20%);
+$primary-light: lighten($primary, 15%);
 $secondary-light: lighten($secondary, 20%);
 $bg-light: lighten($bg, 20%);
 
 // Darkened
-$primary-dark: darken($primary, 20%);
+$primary-dark: darken($primary, 10%);
 $secondary-dark: darken($secondary, 20%);
 $bg-dark: darken($bg, 20%);
 
@@ -28,3 +28,4 @@ $base-font-size: 15px;
 $text-base-color: #e9e9e9;
 
 /* BREAKPOINTS */
+$nav-break: 900px;
