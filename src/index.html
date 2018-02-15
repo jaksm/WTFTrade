@@ -45,7 +45,7 @@
         <a href="#">Settings</a>
       </li>
     </ul>
-  
+
     <ul class="user">
       <!-- @if(Auth::check()) -->
       <li>
@@ -70,33 +70,164 @@
   <main>
     <section>
       <div class="top">
-        <div class="controls"></div>
+        <div class="controls">
+          <span>$0.00</span>
+          <a href="#" class="button">Deposit</a>
+        </div>
       </div>
       <div class="bottom">
-        <div class="controls"></div>
+        <div class="controls">
+        </div>
       </div>
     </section>
     <section>
-      <div class="discount"></div>
-      <div class="info"></div>
-      <div class="bot-filters"></div>
-      <div class="commision"></div>
+      <div class="discount">
+        <h4 class="title">
+          <i class="icon-tag"></i>
+          <span>Get 2%</span> discount</h4>
+        <small>
+          <strong>Add CSGOHELL.TRADE</strong>
+          to your steam nickname
+          <br>
+          <a href="#">Login with steam</a>
+        </small>
+        <hr>
+      </div>
+      <div class="info">
+        <h4 class="title">
+          <i class="icon-hand"></i>
+          <span>Welcome</span>
+        </h4>
+        <small>
+          Recusandae repellendus rerum asperiores nisi expedita inventore dignissimos at laudantium magnam.
+          <br>
+        </small>
+        <h4 class="title">
+          <i class="icon-gift"></i>
+          <span>First Time Bonus</span>
+        </h4>
+        <small>
+          Recusandae repellendus rerum asperiores nisi expedita inventore dignissimos at laudantium magnam.
+          <br>
+        </small>
+        <hr>
+      </div>
+      <div class="bot-filters">
+        <h4 class="title">
+          <span>Bot Filters</span>
+        </h4>
+        <fieldset>
+          <span class="icon-down"></span>
+          <label for="bot_type">Type</label>
+          <select name="bot_type" id="botType">
+            <option value="all">All</option>
+            <option value="all">1st Type</option>
+            <option value="all">2nd Type</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <span class="icon-down"></span>
+          <label for="bot_exterior">Exterior</label>
+          <select name="bot_exterior" id="botExterior">
+            <option value="all">All</option>
+            <option value="all">1st exterior</option>
+            <option value="all">2nd exterior</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <span class="icon-down"></span>
+          <label for="bot_kind">Kind</label>
+          <select name="bot_kind" id="botKind">
+            <option value="all">All</option>
+            <option value="all">1st kind</option>
+            <option value="all">2nd kind</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <span class="icon-down"></span>
+          <label for="bot_rarity">Rarity</label>
+          <select name="bot_rarity" id="botRarity">
+            <option value="all">All</option>
+            <option value="all">1st rarity</option>
+            <option value="all">2nd rarity</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <span class="icon-down"></span>
+          <label for="bot_phase">Phase</label>
+          <select name="bot_phase" id="botPhase">
+            <option value="all">All</option>
+            <option value="all">1st phase</option>
+            <option value="all">2nd phase</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="stat_track">Stat Track</label>
+          <input type="checkbox" name="bot_stat_track" id="botStatTrack">
+        </fieldset>
+        <fieldset>
+          <label for="souvenire">Souvenire</label>
+          <input type="checkbox" name="bot_souvenire" id="botSouvenire">
+        </fieldset>
+        <hr>
+      </div>
+      <div class="commision">
+        <h4 class="title">
+          <span>commision</span>
+        </h4>
+        <div class="commision-content">
+          <div>
+            <small>Keyes</small>
+            <br> 102%
+            <i class="icon-refresh"></i>
+            104%
+          </div>
+          <div>
+            <small>Knives</small>
+            <br> 102%
+            <i class="icon-refresh"></i>
+            104%
+          </div>
+          <div>
+            <small>Rare Weapons</small>
+            <br> 102%
+            <i class="icon-refresh"></i>
+            104%
+          </div>
+          <div>
+            <small>Weapons</small>
+            <br> 102%
+            <i class="icon-refresh"></i>
+            104%
+          </div>
+          <div>
+            <small>Misc.</small>
+            <br> 102%
+            <i class="icon-refresh"></i>
+            104%
+          </div>
+        </div>
+      </div>
     </section>
     <section>
       <div class="top">
-        <div class="controls"></div>
+        <div class="controls">
+          <span>$0.00</span>
+          <a href="#" class="button">Withdraw</a>
+        </div>
       </div>
       <div class="bottom">
-        <div class="controls"></div>
+        <div class="controls">
+        </div>
       </div>
     </section>
   </main>
- <script>
-   const toggle = document.querySelector('#toggle')
-   toggle.onclick = () => {
-     alert('Toggle sidebar.')
-   }
- </script>
+  <script>
+    const toggle = document.querySelector('#toggle')
+    toggle.onclick = () => {
+      alert('Toggle sidebar.')
+    }
+  </script>
 </body>
 
 </html>

@@ -10,6 +10,9 @@ nav {
   font-size: 13px;
   letter-spacing: .025em;
   background: linear-gradient(to right, $primary-dark 0%, $primary-light 40%, $primary-light 60%, $primary-dark 100%);
+  @media screen and (max-width: $nav-break) {
+    padding: 0 1.5em;
+  }
   #toggle {
     display: none;
     font-size: 2em;
@@ -29,7 +32,8 @@ nav {
       margin-right: 1em;
     }
   }
-  .links, .user {
+  .links,
+  .user {
     flex: 1;
     display: flex;
     align-items: center;
@@ -42,18 +46,18 @@ nav {
     justify-content: center;
     li:nth-child(2) {
       a {
-        border-right: 1px solid $bg;
-        border-left: 1px solid $bg;
+        border-right: 1px solid $primary-medium;
+        border-left: 1px solid $primary-medium;
       }
     }
     li {
       padding: 1em;
       a {
         padding: 1em;
-        color: $primary-dark;
+        // color: $primary-dark;
         transition: color .25s ease;
         &:hover {
-          color: $text-base-color;
+          color: $primary;
         }
       }
     }
@@ -70,7 +74,7 @@ nav {
       i {
         height: 18.84px;
         font-size: 1.5em;
-        margin-right: .25em; 
+        margin-right: .25em;
       }
     }
     img {

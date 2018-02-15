@@ -3,52 +3,102 @@ main {
   background-size: cover;
   height: calc(100vh - 4.35em);
   display: flex;
+  @media screen and (max-width: $nav-break) {
+    display: block;
+  }
   section {
-    flex: 2.5;
+    box-sizing: border-box;
+    flex: 2;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 4.35em);
-    background-color: rgba(221, 161, 221, .15);
-    .top, .bottom {
+    height: calc(100vh - 4.75em);
+    background-color: rgba($bg, .4);
+    .top,
+    .bottom {
       position: relative;
       height: 50%;
       .controls {
-        height: 10%;
+        font-size: 80%;
+        box-sizing: border-box;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1em;
         width: 100%;
         top: 0;
         left: 0;
         position: absolute;
-        background-color: rgba(204, 204, 204, .15);
+        background-color: rgba($bg-light, .4);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        a {
+          font-size: 100%;
+        }
+        @media screen and (max-width: $nav-break) {
+          height: 20%;
+          padding: 0 1.5em;
+        }
       }
     }
     .top {
-      background-color: rgba(94, 219, 188, .15);
+      // background-color: rgba(94, 219, 188, .15);
     }
     .bottom {
-      background-color: rgba(154, 214, 41, .15);
+      // background-color: rgba(154, 214, 41, .15);
     }
   }
   section:nth-child(2) {
     box-sizing: border-box;
+    font-size: 14px;
     flex: 1;
-    background-color: rgba(36, 75, 221, .15);
-    .discount {
-      flex: 1;
-      margin: 0 .5em;
-      margin-top: .5em;
-      padding: .5em;
-      background-color: rgba(221, 36, 107, .15);
+    z-index: 1;
+    justify-content: center;
+    background-color: rgba($bg-light, .4);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    @media screen and (max-width: $nav-break) {
+      height: 100vh;
     }
-    .info, .bot-filters, .commision  {
+    .discount {
+      box-sizing: border-box; // flex: 1;
+      font-size: 13px;
+      padding: 0 1em;
+      padding-top: 1em;
+      text-align: center;
+    }
+    .info,
+    .bot-filters,
+    .commision {
       box-sizing: border-box;
-      margin: 0 .5em;
-      margin-top: .5em;
-      padding: .5em; 
-      flex: 3;
-      background-color: rgba(42, 221, 36, .15);
+      padding: 0 1em;
+      padding-top: 1em; // flex: 3;
+      text-align: center;
+      .title:nth-of-type(even) {
+        padding-top: 1em;
+      }
+      .commision-content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        &>div {
+          flex: 1;
+          flex-basis: 50%;
+          padding: .4em 0;
+          small {
+            color: $primary-extra-light;
+          }
+        }
+      }
     }
     div:last-child {
-      margin-bottom: .5em;
+      padding-bottom: 1em;
+    }
+  }
+  section:nth-child(3) {
+    .top,
+    .bottom {
+      .controls {
+        flex-direction: row-reverse;
+      }
     }
   }
 }

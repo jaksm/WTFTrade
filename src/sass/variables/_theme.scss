@@ -1,3 +1,9 @@
 .button-block {
   @include button-block($text-base-color, $primary, $bg, 1em)
 }
+.button {
+  @include button($text-base-color, $primary-medium, $bg, 1em)
+}
+.title {
+  @include title($primary-extra-light)
+}
