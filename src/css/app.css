@@ -653,6 +653,7 @@ nav {
   padding: 0 5em;
   font-size: 13px;
   letter-spacing: .025em;
+  z-index: 3;
   background: -webkit-gradient(linear, left top, right top, from(#100707), color-stop(40%, #7e3732), color-stop(60%, #7e3732), to(#100707));
   background: linear-gradient(to right, #100707 0%, #7e3732 40%, #7e3732 60%, #100707 100%);
 }

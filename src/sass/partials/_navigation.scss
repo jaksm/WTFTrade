@@ -9,6 +9,7 @@ nav {
   padding: 0 5em;
   font-size: 13px;
   letter-spacing: .025em;
+  z-index: 3;
   background: linear-gradient(to right, $primary-dark 0%, $primary-light 40%, $primary-light 60%, $primary-dark 100%);
   @media screen and (max-width: $nav-break) {
     padding: 0 1.5em;
