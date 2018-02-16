@@ -7,3 +7,6 @@
 .title {
   @include title($primary-extra-light)
 }
+.border-secondary {
+  border-color: $secondary-light !important;
+}

@@ -18,20 +18,17 @@ main {
         }
     .top,
     .bottom {
-      position: relative;
+      // position: relative;
+      display: flex;
+      flex-direction: column;
       height: 50%;
       .controls {
         font-size: 80%;
         box-sizing: border-box;
-        height: 15%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 1em;
-        width: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
+        padding: 1em;
         background-color: rgba($bg-light, .4);
         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
         a {

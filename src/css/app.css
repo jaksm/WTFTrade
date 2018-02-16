@@ -607,6 +607,10 @@ ul {
   font-weight: 600;
 }
 
+.border-secondary {
+  border-color: #767997 !important;
+}
+
 .wrapper-landing {
   width: 100vw;
   height: 100vh;
@@ -835,7 +839,13 @@ main section {
 
 main section .top,
 main section .bottom {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 50%;
 }
 
@@ -844,7 +854,6 @@ main section .bottom .controls {
   font-size: 80%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -854,11 +863,7 @@ main section .bottom .controls {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 1em;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
+  padding: 1em;
   background-color: rgba(79, 79, 79, 0.4);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -1017,5 +1022,62 @@ main section:nth-child(3) .bottom .controls {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 80%;
+  overflow-y: scroll;
+}
+
+.items .item-info {
+  text-align: left;
+}
+
+.items .item {
+  text-align: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 90px;
+          flex: 0 1 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px dashed #bd5f59;
+  background: rgba(28, 29, 37, 0.8);
+  margin: .25em;
+  padding: .5em;
+  border-radius: 4px;
+}
+
+.items .item h5 {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: .05em;
+}
+
+.items .item small {
+  color: #838383;
+  letter-spacing: .05em;
+}
+
+.items .item img {
+  width: 100%;
 }
 /*# sourceMappingURL=app.css.map */
