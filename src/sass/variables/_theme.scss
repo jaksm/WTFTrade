@@ -23,3 +23,9 @@
 .bg-secondary {
   background-color: $secondary !important;
 }
+.page-current {
+  color: $primary;
+  &:hover {
+    color: $primary-extra-light !important;
+  }
+}

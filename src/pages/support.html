@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>WTF TRADE | Support</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+
+  <!--
+        <meta name="description" content="CSGO Trade - {{ env('SITE_URL') }} is a fully automated Counter Strike Global Offensive Trading Bot. This trade bot will exchange your unwanted CSGO items fast and easy.">
+        <meta name="keywords" content="trading, skins, counterstrike, global offensive, free, profit, cs go trade bot, csgo trade, cs go trade, trade cs go, trade bots, csgo trade skins,csgotrade, csgo trade, counter strike trade, csgolounge, {{ env('SITE_URL') }} , CSGOSell , csgo exchange, {{ env('SITE_NAME') }}">
+        <meta name="author" content="{{ env('SITE_URL') }}">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ env('SITE_URL') }} : Fast Trade Bot - Automated and Secured trade">
+        <meta property="og:description" content="CSGO Trade - {{ env('SITE_URL') }} is a fully automated Counter Strike Global Offensive Trading Bot. This trade bot will exchange your unwanted CSGO items fast and easy.">
+        <meta property="og:image" content="">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        -->
+
+  <!-- {{ asset('logomark.png') }} -->
+  <link rel="icon" type="image/png" href="../assets/Logo.png">
+  <link rel="shortcut icon" type="image/png" href="../assets/Logo.png">
+  <link href="https://file.myfontastic.com/4BEbcY5D6pPKiDBjhJBMZ4/icons.css" rel="stylesheet">
+  <!-- {{ URL::asset('landing/css/style.css') }} -->
+  <link href="../css/app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="alert">
+    <div class="alert-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <div class="alert-actions">
+      <i class="icon-close" id="alertClose"></i>
+    </div>
+  </div>
+
+  <div class="pop-up" id="settingsPopUp">
+    <div class="pop-up-title">
+      <h1>Trade URL</h1>
+    </div>
+    <div class="pop-up-content">
+      <p>
+        You can find your current Steam Trade URL
+        <a href="#">here.</a>
+      </p>
+      <input type="text" placeholder="Paste Trade URL Here">
+    </div>
+    <div class="pop-up-actions">
+      <a href="#" class="button" id="closeSettingsPopUp">Close</a>
+      <a href="#" class="button-secondary">Save</a>
+    </div>
+  </div>
+
+  <div class="main-wrapper">
+    <nav>
+      <!-- Logo -->
+      <a href="#">
+        <img src="../assets/Logo.png" alt="">Best trading & gambling site!</a>
+      <ul class="links">
+        <li>
+          <a href="../index.html">Trade</a>
+        </li>
+        <li>
+          <a href="#" class="page-current">Support</a>
+        </li>
+        <li>
+          <a href="#" id="settings">Settings</a>
+        </li>
+      </ul>
+
+      <ul class="user">
+        <!-- @if(Auth::check()) -->
+        <li>
+          <a href="#">
+            <i class="icon-logout"></i>Quit</li>
+        </a>
+        <li>
+          <i class="icon-online"></i>
+          <span>Online: 341</span>
+        </li>
+        <li>
+          <i class="icon-balance"></i>
+          <span>Balance: $550.45</span>
+        </li>
+        <li>
+          <img src="../assets/avatar.png" alt="USERNAME HERE" id="avatar">
+        </li>
+        <!-- @else -->
+        <!-- <li><i class="icon-logout"></i><span>Logout</span></li> -->
+        <!-- @endif -->
+      </ul>
+      <i id="toggle" class="icon-hamburger"></i>
+    </nav>
+
+    <main>
+      <div class="support-wrapper">
+        <section>
+          <div class="section-title">
+            <h1>Welcome to WTF Trade, best available trade site!</h1>
+          </div>
+          <div class="section-content">
+            <h2><u>About us</u></h2>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda modi ducimus voluptates distinctio illum fugiat tempora sit dolorum minus provident voluptatem accusamus adipisci doloribus rerum totam facere doloremque, ex voluptate!</li>
+              <li>Dolorum et ab obcaecati omnis esse placeat sint temporibus, maiores adipisci rerum quam mollitia illo quia. Quaerat praesentium dolore deserunt incidunt eum. Dolorem eligendi aliquid nisi tenetur officiis ex inventore.</li>
+              <li>Tempore iure voluptates quis ad consectetur, quisquam architecto veniam. Laborum consectetur, aliquid ut aliquam perferendis illo iusto fuga tenetur nesciunt. Veniam, molestias at officiis perferendis sint deleniti eius dolore officia?</li>
+              <li>Ipsum possimus, amet omnis voluptates repellendus fugiat impedit at laboriosam ea illum. Sed ipsum vero soluta nam magnam fugit necessitatibus veritatis eligendi corporis, odit a eum distinctio! Adipisci, explicabo assumenda.</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="section-title">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+          </div>
+          <div class="section-content">
+            <ul>
+              <li>
+                <h2><u>Question 1</u></h2>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorem dolor harum accusamus consectetur et eaque eum cumque commodi fugit explicabo. Iure aliquam, maxime nam ea voluptas natus necessitatibus.
+              </li>
+              <li>
+                <h2><u>Question 2</u></h2>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorem dolor harum accusamus consectetur et eaque eum cumque commodi fugit explicabo. Iure aliquam, maxime nam ea voluptas natus necessitatibus.
+              </li>
+              <li>
+                <h2><u>Question 3</u></h2>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorem dolor harum accusamus consectetur et eaque eum cumque commodi fugit explicabo. Iure aliquam, maxime nam ea voluptas natus necessitatibus.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="section-title"><h1>Support</h1></div>
+          <div class="section-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.!</p>
+            <p>Dolores architecto ex, omnis vel quas numquam? Facilis quae adipisci nemo sequi tempore?</p> 
+            <div class="contact">
+              <input type="text" name="" id="email" placeholder="Contact email" required>
+              <input type="text" name="" id="subject" placeholder="Subject">
+              <a href="#" class="button">Reserve</a>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="section-title"><h1>HOW TO USE?</h1></div>
+          <div class="section-content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <a href="#" class="super-big-link">CLICK HERE</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script>
+    const settings = document.querySelector('#settings') // navbar ul button
+    const settingsPopUp = document.querySelector('#settingsPopUp')
+    const settingsCloseBtn = document.querySelector('#closeSettingsPopUp')
+
+    const alert = document.querySelector('.alert')
+    const alertCloseBtn = document.querySelector('#alertClose')
+
+    const wrapper = document.querySelector('.main-wrapper')
+
+    /*** ALERT ***/
+    /**
+    * @function Close Alert
+    */
+    alertCloseBtn.addEventListener('click', e => {
+      alert.classList.remove('alert-active')
+    })
+
+    /**
+    * @function Autoshow Alert (za demonstraciju)
+    */
+    setTimeout(() => {
+      alert.classList.add('alert-active')
+      setTimeout(() => {
+        alert.classList.remove('alert-active')
+      }, 3000)
+    }, 1000)
+
+    /*** SETTINGS ***/
+    /**
+    * @function Show Settings Pop-Up
+    */
+    settings.addEventListener('click', e => {
+      e.preventDefault()
+      wrapper.classList.toggle('blur')
+      settingsPopUp.classList.toggle('pop-up-active')
+      setTimeout(() => {
+        settingsPopUp.style.opacity = '1'
+      }, 10)
+    })
+
+    /**
+    * @function Close Settings Pop-Up
+    */
+    settingsCloseBtn.addEventListener('click', e => {
+      e.preventDefault()
+      settingsPopUp.style.opacity = '0'
+      wrapper.classList.remove('blur')
+      setTimeout(() => {
+        settingsPopUp.classList.remove('pop-up-active')
+      }, 250)
+    })
+  </script>
+</body>
+
+</html>

@@ -84,10 +84,10 @@
       <img src="assets/Logo.png" alt="">Best trading & gambling site!</a>
     <ul class="links">
       <li>
-        <a href="#">Trade</a>
+        <a href="#" class="page-current">Trade</a>
       </li>
       <li>
-        <a href="#">Support</a>
+        <a href="pages/support.html">Support</a>
       </li>
       <li>
         <a href="#" id="settings">Settings</a>
@@ -97,7 +97,9 @@
     <ul class="user">
       <!-- @if(Auth::check()) -->
       <li>
-        <i class="icon-logout"></i>Quit</li>
+        <a href="#">
+          <i class="icon-logout"></i>Quit</li>
+        </a>
       <li>
         <i class="icon-online"></i>
         <span>Online: 341</span>
@@ -479,7 +481,7 @@
     */
     settingsCloseBtn.addEventListener('click', e => {
       e.preventDefault()
-      depositPopUp.style.opacity = '0'
+      settingsPopUp.style.opacity = '0'
       wrapper.classList.remove('blur')
       setTimeout(() => {
         settingsPopUp.classList.remove('pop-up-active')

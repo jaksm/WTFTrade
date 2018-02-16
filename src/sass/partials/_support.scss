@@ -1,0 +1,48 @@
+.support-wrapper {
+  box-sizing: border-box;
+  section {
+    box-sizing: border-box;
+    width: 70%;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: $bg-medium !important;
+    box-shadow: 0px 0px 10px 0px $primary !important;
+    @media screen and (max-width: $bottom-controls-break) {
+      width: 90%;
+      height: auto;
+    }
+    .section-title {
+      color: $primary-extra-light;
+    }
+    .section-content {
+      .contact {
+        input {
+          width: 30%;
+          padding: 1em;
+          @media screen and (max-width: $bottom-controls-break) {
+            display: block !important;
+            width: 100% !important;
+            margin-bottom: 1em;
+          }
+        }
+        @media screen and (max-width: $bottom-controls-break) {
+          text-align: center;
+        }
+      }
+      .super-big-link {
+        display: block;
+        font-size: 5em;
+        font-weight: 100;
+        padding: 0;
+      }
+    }
+  }
+  @media screen and (max-width: $bottom-controls-break) {
+    section:first-child {
+      margin-top: 0;
+    }
+    section:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

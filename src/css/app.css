@@ -644,6 +644,14 @@ ul {
   background-color: #484a5f !important;
 }
 
+.page-current {
+  color: #351715;
+}
+
+.page-current:hover {
+  color: #bd5f59 !important;
+}
+
 .wrapper-landing {
   width: 100vw;
   height: 100vh;
@@ -767,6 +775,23 @@ nav .user {
           align-items: center;
 }
 
+nav .links li,
+nav .user li {
+  padding: 1em;
+}
+
+nav .links li a,
+nav .user li a {
+  padding: 1em;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+nav .links li a:hover,
+nav .user li a:hover {
+  color: #bd5f59;
+}
+
 @media screen and (max-width: 900px) {
   nav .links,
   nav .user {
@@ -784,20 +809,6 @@ nav .links {
 nav .links li:nth-child(2) a {
   border-right: 1px solid #5a2723;
   border-left: 1px solid #5a2723;
-}
-
-nav .links li {
-  padding: 1em;
-}
-
-nav .links li a {
-  padding: 1em;
-  -webkit-transition: color .25s ease;
-  transition: color .25s ease;
-}
-
-nav .links li a:hover {
-  color: #351715;
 }
 
 nav .user {
@@ -819,6 +830,12 @@ nav .user li {
   font-size: 95%;
   padding: .5em;
   cursor: pointer;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+nav .user li a {
+  padding: 0;
 }
 
 nav .user li i {
@@ -827,9 +844,75 @@ nav .user li i {
   margin-right: .25em;
 }
 
+nav .user li:hover {
+  color: #bd5f59;
+}
+
 nav .user img {
   width: 50px;
   margin-left: 1em;
+}
+
+.support-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.support-wrapper section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 70%;
+  margin: 1em auto;
+  padding: 1em;
+  background-color: #353535 !important;
+  -webkit-box-shadow: 0px 0px 10px 0px #351715 !important;
+          box-shadow: 0px 0px 10px 0px #351715 !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .support-wrapper section {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.support-wrapper section .section-title {
+  color: #bd5f59;
+}
+
+.support-wrapper section .section-content .contact input {
+  width: 30%;
+  padding: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+  .support-wrapper section .section-content .contact input {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .support-wrapper section .section-content .contact {
+    text-align: center;
+  }
+}
+
+.support-wrapper section .section-content .super-big-link {
+  display: block;
+  font-size: 5em;
+  font-weight: 100;
+  padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .support-wrapper section:first-child {
+    margin-top: 0;
+  }
+  .support-wrapper section:last-child {
+    margin-bottom: 0;
+  }
 }
 
 main {
