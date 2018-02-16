@@ -4,9 +4,22 @@
 .button {
   @include button($text-base-color, $primary-medium, $bg, 1em)
 }
+.button-secondary {
+  @include button($text-base-color, $secondary, $bg, 1em)
+}
 .title {
   @include title($primary-extra-light)
 }
 .border-secondary {
   border-color: $secondary-light !important;
+}
+.blur {
+  filter: blur(5px);
+  transform: scale(1.0125);
+}
+.bg-primary {
+  background-color: $primary-light !important;
+}
+.bg-secondary {
+  background-color: $secondary !important;
 }

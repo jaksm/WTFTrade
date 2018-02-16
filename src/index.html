@@ -30,6 +30,54 @@
 </head>
 
 <body>
+
+  <div class="alert">
+    <div class="alert-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <div class="alert-actions">
+      <i class="icon-close" id="alertClose"></i>
+    </div>
+  </div>
+
+  <div class="pop-up" id="settingsPopUp">
+    <div class="pop-up-title">
+      <h1>Trade URL</h1>
+    </div>
+    <div class="pop-up-content">
+      <p>
+        You can find your current Steam Trade URL
+        <a href="#">here.</a>
+      </p>
+      <input type="text" placeholder="Paste Trade URL Here">
+    </div>
+    <div class="pop-up-actions">
+      <a href="#" class="button" id="closeSettingsPopUp">Close</a>
+      <a href="#" class="button-secondary">Save</a>
+    </div>
+  </div>
+
+  <div class="pop-up" id="depositPopUp">
+    <div class="pop-up-title">
+      <h1>Deposit</h1>
+    </div>
+    <div class="pop-up-content">
+      <span>
+      <p>Trade with Bot:
+        <strong>WTFTRADE | BOT #25</strong>
+      </p>
+      <p>The secret code:
+        <strong>Qsda45</strong>
+      </p>
+      <p>Value:
+        <strong>$0.36</strong>
+      </p>
+      </span>
+    </div>
+    <div class="pop-up-actions">
+      <a href="#" class="button" id="depositClose">Confirm trade</a>
+    </div>
+  </div>
+
+  <div class="main-wrapper">
   <nav>
     <!-- Logo -->
     <a href="#">
@@ -42,10 +90,10 @@
         <a href="#">Support</a>
       </li>
       <li>
-        <a href="#">Settings</a>
+        <a href="#" id="settings">Settings</a>
       </li>
     </ul>
-
+  
     <ul class="user">
       <!-- @if(Auth::check()) -->
       <li>
@@ -67,12 +115,13 @@
     </ul>
     <i id="toggle" class="icon-hamburger"></i>
   </nav>
+
   <main>
     <section>
       <div class="top">
         <div class="controls">
           <span>$0.00</span>
-          <a href="#" class="button">Deposit</a>
+          <a href="#" class="button" id="deposit">Deposit</a>
         </div>
         <div class="items">
           <div class="item border-secondary">
@@ -91,17 +140,17 @@
             <img src="assets/avatar.png" alt="USERNAME HERE">
             <h2>Criminal Juan</h2>
           </div>
-
-        <div>
-          <div class="search">
-            <input type="text" placeholder="Search">
-            <i class="icon-search"></i>
+  
+          <div>
+            <div class="search">
+              <input type="text" placeholder="Search">
+              <i class="icon-search"></i>
+            </div>
+            <select>
+              <option value="1">From High To Low</option>
+              <option value="1">From Low To High</option>
+            </select>
           </div>
-          <select>
-            <option value="1">From High To Low</option>
-            <option value="1">From Low To High</option>
-          </select>
-        </div>
         </div>
         <div class="items">
           <div class="item border-secondary">
@@ -267,16 +316,16 @@
             <img src="assets/Logo.png" alt="USERNAME HERE">
             <h2>Bot Inventory</h2>
           </div>
-        <div>
-          <div class="search">
-            <input type="text" placeholder="Search">
-            <i class="icon-search"></i>
+          <div>
+            <div class="search">
+              <input type="text" placeholder="Search">
+              <i class="icon-search"></i>
+            </div>
+            <select>
+              <option value="1">From High To Low</option>
+              <option value="1">From Low To High</option>
+            </select>
           </div>
-          <select>
-            <option value="1">From High To Low</option>
-            <option value="1">From Low To High</option>
-          </select>
-        </div>
         </div>
         <div class="items">
           <div class="item">
@@ -355,11 +404,87 @@
       </div>
     </section>
   </main>
+  </div>
   <script>
-    const toggle = document.querySelector('#toggle')
-    toggle.onclick = () => {
-      alert('Toggle sidebar.')
-    }
+    const settings = document.querySelector('#settings') // navbar ul button
+    const settingsPopUp = document.querySelector('#settingsPopUp')
+    const settingsCloseBtn = document.querySelector('#closeSettingsPopUp')
+
+    const depositBtn = document.querySelector('#deposit')
+    const depositCloseBtn = document.querySelector('#depositClose')
+
+    const alert = document.querySelector('.alert')
+    const alertCloseBtn = document.querySelector('#alertClose')
+
+    const wrapper = document.querySelector('.main-wrapper')
+
+    /*** ALERT ***/
+    /**
+    * @function Close Alert
+    */
+    alertCloseBtn.addEventListener('click', e => {
+      alert.classList.remove('alert-active')
+    })
+
+    /**
+    * @function Autoshow Alert (za demonstraciju)
+    */
+    setTimeout(() => {
+      alert.classList.add('alert-active')
+      setTimeout(() => {
+        alert.classList.remove('alert-active')
+      }, 3000)
+    }, 1000)
+
+    /*** DEPOSIT ***/
+    /**
+    * @function Show Deposit Pop-Up
+    */
+    depositBtn.addEventListener('click', e => {
+      e.preventDefault()
+      wrapper.classList.add('blur')
+      depositPopUp.classList.add('pop-up-active')
+      setTimeout(() => {
+        depositPopUp.style.opacity = '1'
+      }, 10)
+    })
+
+    /**
+    * @function Close Deposit Pop-Up
+    */
+    depositCloseBtn.addEventListener('click', e => {
+      e.preventDefault()
+      wrapper.classList.remove('blur')
+      depositPopUp.style.opacity = '0'
+      setTimeout(() => {
+        depositPopUp.classList.remove('pop-up-active')
+      }, 250)
+    })
+
+    /*** SETTINGS ***/
+    /**
+    * @function Show Settings Pop-Up
+    */
+    settings.addEventListener('click', e => {
+      e.preventDefault()
+      wrapper.classList.toggle('blur')
+      settingsPopUp.classList.toggle('pop-up-active')
+      setTimeout(() => {
+        settingsPopUp.style.opacity = '1'
+      }, 10)
+    })
+
+    /**
+    * @function Close Settings Pop-Up
+    */
+    settingsCloseBtn.addEventListener('click', e => {
+      e.preventDefault()
+      depositPopUp.style.opacity = '0'
+      wrapper.classList.remove('blur')
+      setTimeout(() => {
+        settingsPopUp.classList.remove('pop-up-active')
+      }, 250)
+    })
   </script>
 </body>
 

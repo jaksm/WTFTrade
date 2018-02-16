@@ -1,0 +1,37 @@
+.alert {
+  position: fixed;
+  top: 20px;
+  right: -340px;
+  z-index: 10;
+  background-color: $bg-medium;
+  box-shadow: 0px 0px 10px 0px $primary;
+  display: flex;
+  height: auto;
+  width: 300px;
+  padding: 1em;
+  border-radius: 4px;
+  transition: right .25s ease;
+  .alert-content {
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+  }
+  .alert-actions {
+    display: flex;
+    align-items: flex-start;
+    i {
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    width: 80vw;
+    right: -90vw;
+  }
+}
+.alert-active {
+  right: 20px;
+  @media screen and (max-width: 700px) {
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+}
