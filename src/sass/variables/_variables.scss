@@ -2,7 +2,7 @@
 
 // Base colors
 $primary: #351715;
-$secondary: #1b0d19;
+$secondary: #484a5f;
 $bg: #0f0f0f;
 // Lightened
 $primary-extra-light: lighten($primary, 40%);
@@ -31,3 +31,4 @@ $text-base-color: #e9e9e9;
 /* BREAKPOINTS */
 
 $nav-break: 900px;
+$bottom-controls-break: 1200px;

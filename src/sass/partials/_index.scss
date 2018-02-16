@@ -1,17 +1,18 @@
 main {
   background: url(#{$assets}/bg_main.png) no-repeat center;
   background-size: cover;
-  height: calc(100vh - 4.35em);
+  height: auto;
   display: flex;
+  min-height: calc(100vh - 4.35em);
   @media screen and (max-width: $nav-break) {
     display: block;
   }
   section {
     box-sizing: border-box;
-    flex: 2;
+    flex: 2.75;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 4.75em);
+    height: calc(100vh - 5em);
     background-color: rgba($bg, .4);
     .top,
     .bottom {
@@ -34,29 +35,69 @@ main {
         a {
           font-size: 100%;
         }
-        @media screen and (max-width: $nav-break) {
-          height: 20%;
-          padding: 0 1.5em;
+        @media screen and (max-width: $bottom-controls-break) {
+          height: auto;
+          padding: 1em 1.5em;
+          display: block;
         }
       }
     }
     .top {
-      // background-color: rgba(94, 219, 188, .15);
+      .controls {
+        @media screen and (max-width: $bottom-controls-break) {
+          display: flex;
+        }
+      }
     }
     .bottom {
-      // background-color: rgba(154, 214, 41, .15);
+      .controls {
+        div {
+          text-align: center;
+          padding-top: .5em;
+          select {
+            font-size: 90%;
+            padding: .5em 1em;            
+          }
+          .search {
+              position: relative;
+              display: inline;
+            input {
+              padding: .5em 2em;
+            }
+            .icon-search {
+              position: absolute;
+              right: 1em;
+              top: 50%;
+              font-size: 90%;
+              transform: translate(0, -50%);
+            }
+          }
+        }
+        .user {
+          display: flex;
+          align-items: center;
+          h2 {
+            display: inline;
+            margin: 0;
+            margin-left: 1em; 
+          }
+          img {
+            width: 3em;
+            height: 100%;
+          }
+        }
+      }
     }
   }
   section:nth-child(2) {
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 13.5px;
     flex: 1;
     z-index: 1;
-    justify-content: center;
     background-color: rgba($bg-light, .4);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     @media screen and (max-width: $nav-break) {
-      height: 100vh;
+      height: auto;
     }
     .discount {
       box-sizing: border-box; // flex: 1;
@@ -76,8 +117,8 @@ main {
         padding-top: 1em;
       }
       .commision-content {
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
         padding: 0;
         &>div {
           flex: 1;
@@ -97,7 +138,7 @@ main {
     .top,
     .bottom {
       .controls {
-        flex-direction: row-reverse;
+        flex-direction: row;
       }
     }
   }

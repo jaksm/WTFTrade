@@ -96,6 +96,9 @@ hr {
   /* 2 */
   margin: 0;
   margin-top: 1em;
+  color: #bd5f59;
+  border-color: #bd5f59;
+  background-color: #bd5f59;
 }
 
 /**
@@ -262,9 +265,8 @@ textarea {
           box-sizing: border-box;
   font-family: sans-serif;
   /* 1 */
-  font-size: 100%;
+  font-size: 90%;
   /* 1 */
-  line-height: 1.15;
   /* 1 */
   margin: 0;
   /* 2 */
@@ -288,6 +290,26 @@ button,
 select {
   /* 1 */
   text-transform: none;
+}
+
+select,
+input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: .1em;
+  width: auto;
+  background-color: #1c1d25;
+  border: 1px solid #484a5f;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+select > option,
+input > option {
+  background-color: #1c1d25;
+  color: inherit;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /**
@@ -776,10 +798,11 @@ nav .user img {
 main {
   background: url(../../src/assets/bg_main.png) no-repeat center;
   background-size: cover;
-  height: calc(100vh - 4.35em);
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: calc(100vh - 4.35em);
 }
 
 @media screen and (max-width: 900px) {
@@ -791,9 +814,9 @@ main {
 main section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 2.75;
+      -ms-flex: 2.75;
+          flex: 2.75;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -801,7 +824,7 @@ main section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: calc(100vh - 4.75em);
+  height: calc(100vh - 5em);
   background-color: rgba(15, 15, 15, 0.4);
 }
 
@@ -841,25 +864,79 @@ main section .bottom .controls a {
   font-size: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   main section .top .controls,
   main section .bottom .controls {
-    height: 20%;
-    padding: 0 1.5em;
+    height: auto;
+    padding: 1em 1.5em;
+    display: block;
   }
+}
+
+@media screen and (max-width: 1200px) {
+  main section .top .controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+main section .bottom .controls div {
+  text-align: center;
+  padding-top: .5em;
+}
+
+main section .bottom .controls div select {
+  font-size: 90%;
+  padding: .5em 1em;
+}
+
+main section .bottom .controls div .search {
+  position: relative;
+  display: inline;
+}
+
+main section .bottom .controls div .search input {
+  padding: .5em 2em;
+}
+
+main section .bottom .controls div .search .icon-search {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  font-size: 90%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+main section .bottom .controls .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .bottom .controls .user h2 {
+  display: inline;
+  margin: 0;
+  margin-left: 1em;
+}
+
+main section .bottom .controls .user img {
+  width: 3em;
+  height: 100%;
 }
 
 main section:nth-child(2) {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 14px;
+  font-size: 13.5px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   z-index: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: rgba(79, 79, 79, 0.4);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -867,7 +944,7 @@ main section:nth-child(2) {
 
 @media screen and (max-width: 900px) {
   main section:nth-child(2) {
-    height: 100vh;
+    height: auto;
   }
 }
 
@@ -899,11 +976,6 @@ main section:nth-child(2) .commision .title:nth-of-type(even) {
 main section:nth-child(2) .info .commision-content,
 main section:nth-child(2) .bot-filters .commision-content,
 main section:nth-child(2) .commision .commision-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding: 0;
 }
 
@@ -931,8 +1003,8 @@ main section:nth-child(2) div:last-child {
 main section:nth-child(3) .top .controls,
 main section:nth-child(3) .bottom .controls {
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 /*# sourceMappingURL=app.css.map */

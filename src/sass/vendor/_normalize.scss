@@ -103,6 +103,9 @@ hr {
   /* 2 */
   margin: 0;
   margin-top: 1em;
+  color: $primary-extra-light;
+  border-color: $primary-extra-light;
+  background-color: $primary-extra-light;
 }
 
 /**
@@ -283,9 +286,9 @@ textarea {
   box-sizing: border-box;
   font-family: sans-serif;
   /* 1 */
-  font-size: 100%;
+  font-size: 90%;
   /* 1 */
-  line-height: 1.15;
+  // line-height: 1.15;
   /* 1 */
   margin: 0;
   /* 2 */
@@ -311,6 +314,23 @@ button,
 select {
   /* 1 */
   text-transform: none;
+}
+
+select,
+input {
+    box-sizing: border-box;
+    letter-spacing: .1em;
+    width: auto;
+    background-color: $secondary-dark;
+    border: 1px solid $secondary;
+    color: inherit;
+    font-family: inherit;
+    outline: none;
+    &>option {
+      background-color: $secondary-dark;
+      color: inherit;
+      font-family: $heading;
+    }
 }
 
 /**
