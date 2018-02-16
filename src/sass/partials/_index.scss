@@ -12,8 +12,10 @@ main {
     flex: 2.75;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 5em);
     background-color: rgba($bg, .4);
+        @media screen and (max-width: $bottom-controls-break) {
+          height: calc(100vh - 5em);
+        }
     .top,
     .bottom {
       position: relative;

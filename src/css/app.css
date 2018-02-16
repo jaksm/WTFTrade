@@ -824,8 +824,13 @@ main section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: calc(100vh - 5em);
   background-color: rgba(15, 15, 15, 0.4);
+}
+
+@media screen and (max-width: 1200px) {
+  main section {
+    height: calc(100vh - 5em);
+  }
 }
 
 main section .top,
