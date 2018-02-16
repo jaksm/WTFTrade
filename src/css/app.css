@@ -883,7 +883,6 @@ main section .bottom .controls a {
 
 main section .bottom .controls div {
   text-align: center;
-  padding-top: .5em;
 }
 
 main section .bottom .controls div select {
@@ -893,7 +892,8 @@ main section .bottom .controls div select {
 
 main section .bottom .controls div .search {
   position: relative;
-  display: inline;
+  display: inline-block;
+  height: auto;
 }
 
 main section .bottom .controls div .search input {
@@ -916,6 +916,12 @@ main section .bottom .controls .user {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  main section .bottom .controls .user {
+    margin-bottom: .5em;
+  }
 }
 
 main section .bottom .controls .user h2 {
