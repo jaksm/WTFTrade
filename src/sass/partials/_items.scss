@@ -31,5 +31,9 @@
     img {
       width: 100%;
     }
+    transition:  background-color .25s ease;
+    &:hover {
+      background-color: darken($secondary-dark, 5%);
+    }
   }
 }

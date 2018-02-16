@@ -1064,6 +1064,8 @@ main section:nth-child(3) .bottom .controls {
   margin: .25em;
   padding: .5em;
   border-radius: 4px;
+  -webkit-transition: background-color .25s ease;
+  transition: background-color .25s ease;
 }
 
 .items .item h5 {
@@ -1079,5 +1081,9 @@ main section:nth-child(3) .bottom .controls {
 
 .items .item img {
   width: 100%;
+}
+
+.items .item:hover {
+  background-color: #111216;
 }
 /*# sourceMappingURL=app.css.map */
