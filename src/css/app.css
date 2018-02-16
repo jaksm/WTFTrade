@@ -892,7 +892,7 @@ main section .bottom .controls a {
 }
 
 main section .bottom .controls div {
-  text-align: center;
+  text-align: left;
 }
 
 main section .bottom .controls div select {
