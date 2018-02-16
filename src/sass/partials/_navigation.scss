@@ -11,6 +11,7 @@ nav {
   letter-spacing: .025em;
   z-index: 3;
   background: linear-gradient(to right, $primary-dark 0%, $primary-light 40%, $primary-light 60%, $primary-dark 100%);
+  transition: all .25s linear;
   @media screen and (max-width: $nav-break) {
     padding: 0 1.5em;
   }
@@ -18,6 +19,9 @@ nav {
     display: none;
     font-size: 2em;
     font-weight: 100;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
     @media screen and (max-width: $nav-break) {
       display: block;
@@ -90,4 +94,16 @@ nav {
       margin-left: 1em;
     }
   }
+}
+.nav-active {
+  @media screen and (max-width: $nav-break) {
+    height: auto;
+    flex-direction: column;
+    padding: 2.5em;
+    .user,
+    .links {
+      display: flex;
+      margin: 0;
+    }
+  } 
 }

@@ -645,11 +645,15 @@ ul {
 }
 
 .page-current {
-  color: #351715;
+  color: #bd5f59;
 }
 
 .page-current:hover {
-  color: #bd5f59 !important;
+  color: #f7eceb !important;
+}
+
+.item-disabled {
+  opacity: .25;
 }
 
 .wrapper-landing {
@@ -723,6 +727,8 @@ nav {
   z-index: 3;
   background: -webkit-gradient(linear, left top, right top, from(#100707), color-stop(40%, #7e3732), color-stop(60%, #7e3732), to(#100707));
   background: linear-gradient(to right, #100707 0%, #7e3732 40%, #7e3732 60%, #100707 100%);
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
 }
 
 @media screen and (max-width: 900px) {
@@ -735,6 +741,9 @@ nav #toggle {
   display: none;
   font-size: 2em;
   font-weight: 100;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
 }
 
@@ -851,6 +860,24 @@ nav .user li:hover {
 nav .user img {
   width: 50px;
   margin-left: 1em;
+}
+
+@media screen and (max-width: 900px) {
+  .nav-active {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2.5em;
+  }
+  .nav-active .user,
+  .nav-active .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
 }
 
 .support-wrapper {

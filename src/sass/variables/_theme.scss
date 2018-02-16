@@ -24,8 +24,11 @@
   background-color: $secondary !important;
 }
 .page-current {
-  color: $primary;
+  color: $primary-extra-light;
   &:hover {
-    color: $primary-extra-light !important;
+    color: lighten($primary-extra-light, 40%) !important;
   }
+}
+.item-disabled {
+  opacity: .25;
 }

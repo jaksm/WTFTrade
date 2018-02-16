@@ -330,10 +330,10 @@
           </div>
         </div>
         <div class="items">
-          <div class="item">
+          <div class="item item-disabled">
             <div class="item-info">
               <h5>Karambit | Doppler Ruby</h5>
-              <small>Factory New</small>
+              <small>Disabled</small>
             </div>
             <img src="assets/items/karambit.png" alt="ITEM NAME HERE">
             <h5>$0.35</h5>
@@ -408,6 +408,9 @@
   </main>
   </div>
   <script>
+    const toggle = document.querySelector('#toggle')
+    const nav = document.querySelector('nav')
+
     const settings = document.querySelector('#settings') // navbar ul button
     const settingsPopUp = document.querySelector('#settingsPopUp')
     const settingsCloseBtn = document.querySelector('#closeSettingsPopUp')
@@ -419,6 +422,10 @@
     const alertCloseBtn = document.querySelector('#alertClose')
 
     const wrapper = document.querySelector('.main-wrapper')
+    /*** TOGGLE ***/
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-active')
+    })
 
     /*** ALERT ***/
     /**
