@@ -12,6 +12,11 @@ nav {
   z-index: 3;
   background: linear-gradient(to right, $primary-dark 0%, $primary-light 35%, $primary-light 65%, $primary-dark 100%);
   transition: all .25s linear;
+  #title {
+    @media screen and (max-width: $nav-break) {
+      flex: .75;
+    }
+  }
   @media screen and (max-width: $nav-break) {
     padding: 0 1.5em;
   }
