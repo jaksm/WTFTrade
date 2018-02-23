@@ -929,6 +929,8 @@ nav .user img {
 }
 
 .support-wrapper {
+  background: url(../../src/assets/bg_main.png) no-repeat center;
+  background-size: cover;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -981,13 +983,12 @@ nav .user img {
   padding: 0;
 }
 
-@media screen and (max-width: 1200px) {
-  .support-wrapper section:first-child {
-    margin-top: 0;
-  }
-  .support-wrapper section:last-child {
-    margin-bottom: 0;
-  }
+.support-wrapper section:first-child {
+  margin-top: 0;
+}
+
+.support-wrapper section:last-child {
+  margin-bottom: 0;
 }
 
 main {

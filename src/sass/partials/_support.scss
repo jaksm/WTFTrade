@@ -1,4 +1,6 @@
 .support-wrapper {
+  background: url(#{$assets}/bg_main.png) no-repeat center;
+  background-size: cover;
   box-sizing: border-box;
   section {
     box-sizing: border-box;
@@ -37,12 +39,10 @@
       }
     }
   }
-  @media screen and (max-width: $bottom-controls-break) {
     section:first-child {
       margin-top: 0;
     }
     section:last-child {
       margin-bottom: 0;
     }
-  }
 }
