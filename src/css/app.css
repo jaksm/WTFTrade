@@ -941,6 +941,7 @@ nav .user img {
   background-size: cover;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 2em 0;
 }
 
 .support-wrapper section {
@@ -989,14 +990,6 @@ nav .user img {
   font-size: 5em;
   font-weight: 100;
   padding: 0;
-}
-
-.support-wrapper section:first-child {
-  margin-top: 0;
-}
-
-.support-wrapper section:last-child {
-  margin-bottom: 0;
 }
 
 main {
