@@ -8,7 +8,7 @@
   @include button($text-base-color, $secondary, $bg, 1em)
 }
 .title {
-  @include title($primary-extra-light)
+  @include title($text-base-color)
 }
 .border-secondary {
   border-color: $secondary-light !important;
@@ -31,4 +31,25 @@
 }
 .item-disabled {
   opacity: .25;
+}
+.animate-logo {
+  & > .pop-up-title,
+  .pop-up-content,
+  .pop-up-actions {
+    display: none !important;
+  }
+  .logo-animation {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    animation-name: bounce;
+    animation-duration: .35s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    padding: 2em;
+  }
+    @keyframes bounce {
+      from { transform: translateY(-7.5%); }
+      to { transform: translateY(7.5%); }
+    }
 }

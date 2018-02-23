@@ -10,7 +10,7 @@ nav {
   font-size: 13px;
   letter-spacing: .025em;
   z-index: 3;
-  background: linear-gradient(to right, $primary-dark 0%, $primary-light 40%, $primary-light 60%, $primary-dark 100%);
+  background: linear-gradient(to right, $primary-dark 0%, $primary-light 35%, $primary-light 65%, $primary-dark 100%);
   transition: all .25s linear;
   @media screen and (max-width: $nav-break) {
     padding: 0 1.5em;
@@ -32,6 +32,10 @@ nav {
     flex: 1;
     align-items: center;
     color: $text-base-color;
+    transition: color .25s ease;
+    &:hover {
+      color: $primary-extra-light;
+    }
     img {
       width: 50px;
       margin-right: 1em;
@@ -46,11 +50,6 @@ nav {
       padding: 1em;
       a {
         padding: 1em;
-        // color: $primary-dark;
-        transition: color .25s ease;
-        &:hover {
-          color: $primary-extra-light;
-        }
       }
     }
     @media screen and (max-width: $nav-break) {
@@ -60,6 +59,13 @@ nav {
   .links {
     text-transform: uppercase;
     justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    li > a {
+      color: $bg;
+      &:hover {
+        color: $text-base-color;
+      }
+    }
     li:nth-child(2) {
       a {
         border-right: 1px solid $primary-medium;
@@ -79,6 +85,7 @@ nav {
       transition: color .25s ease;
       a {
         padding: 0;
+        // color: $text-base-color;
       }
       i {
         height: 18.84px;
@@ -86,7 +93,7 @@ nav {
         margin-right: .25em;
       }
       &:hover {
-        color: $primary-extra-light;
+        // color: $primary-extra-light;
       }
     }
     img {

@@ -1,12 +1,12 @@
 /* COLORS */
 
 // Base colors
-$primary: #351715;
+$primary: #331313;
 $secondary: #484a5f;
-$bg: #0f0f0f;
+$bg: rgb(17, 17, 17);
 // Lightened
 $primary-extra-light: lighten($primary, 40%);
-$primary-light: lighten($primary, 20%);
+$primary-light: lighten($primary, 25%);
 $primary-medium: lighten($primary, 10%);
 $secondary-light: lighten($secondary, 20%);
 $bg-light: lighten($bg, 25%);

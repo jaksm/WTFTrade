@@ -1,11 +1,11 @@
 main {
   background: url(#{$assets}/bg_main.png) no-repeat center;
   background-size: cover;
-  height: auto;
   display: flex;
-  min-height: calc(100vh - 4.35em);
+  height: calc(100vh - 4.35em);
   @media screen and (max-width: $nav-break) {
     display: block;
+    height: auto;
   }
   section {
     box-sizing: border-box;
@@ -13,15 +13,14 @@ main {
     display: flex;
     flex-direction: column;
     background-color: rgba($bg, .4);
-        @media screen and (max-width: $bottom-controls-break) {
-          height: 150vh;
-        }
+        // @media screen and (max-width: $bottom-controls-break) {
+        //   height: 150vh;
+        // }
     .top,
     .bottom {
       // position: relative;
       display: flex;
       flex-direction: column;
-      height: 50%;
       .controls {
         font-size: 80%;
         box-sizing: border-box;
@@ -35,13 +34,13 @@ main {
           font-size: 100%;
         }
         @media screen and (max-width: $bottom-controls-break) {
-          height: auto;
           padding: 1em 1.5em;
           display: block;
         }
       }
     }
     .top {
+      flex: 1;
       .controls {
         @media screen and (max-width: $bottom-controls-break) {
           display: flex;
@@ -49,10 +48,10 @@ main {
       }
     }
     .bottom {
+      flex: 1.5;
       .controls {
         div {
           text-align: left;
-          // padding-top: .5em;
           select {
             font-size: 90%;
             padding: .5em 1em;            
@@ -95,13 +94,15 @@ main {
   section:nth-child(2) {
     box-sizing: border-box;
     font-size: 13.5px;
+    color: $text-base-color;
     flex: 1;
     z-index: 1;
+    overflow-y: scroll;
     background-color: rgba($bg-light, .4);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    @media screen and (max-width: $nav-break) {
-      height: auto;
-    }
+    // @media screen and (max-width: $nav-break) {
+    //   height: auto;
+    // }
     .discount {
       box-sizing: border-box; // flex: 1;
       font-size: 13px;
@@ -127,9 +128,6 @@ main {
           flex: 1;
           flex-basis: 50%;
           padding: .4em 0;
-          small {
-            color: $primary-extra-light;
-          }
         }
       }
     }
@@ -144,8 +142,11 @@ main {
         flex-direction: row;
       }
     }
+    .top > .controls {
+      flex-direction: row-reverse;
+    }
   }
 }
-body {
-  overflow-x: hidden; 
-}
+// body {
+//   overflow: hidden; 
+// }
