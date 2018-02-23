@@ -96,9 +96,9 @@ hr {
   /* 2 */
   margin: 0;
   margin-top: 1em;
-  color: #842c2c;
-  border-color: #842c2c;
-  background-color: #842c2c;
+  color: #973232;
+  border-color: #973232;
+  background-color: #973232;
 }
 
 /**
@@ -637,7 +637,7 @@ ul {
 }
 
 .bg-primary {
-  background-color: #842c2c !important;
+  background-color: #973232 !important;
 }
 
 .bg-secondary {
@@ -769,8 +769,8 @@ nav {
   font-size: 13px;
   letter-spacing: .025em;
   z-index: 3;
-  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(35%, #842c2c), color-stop(65%, #842c2c), to(black));
-  background: linear-gradient(to right, black 0%, #842c2c 35%, #842c2c 65%, black 100%);
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(35%, #973232), color-stop(65%, #973232), to(black));
+  background: linear-gradient(to right, black 0%, #973232 35%, #973232 65%, black 100%);
   -webkit-transition: all .25s linear;
   transition: all .25s linear;
 }
